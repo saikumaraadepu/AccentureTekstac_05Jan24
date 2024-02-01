@@ -1,0 +1,8 @@
+name = input("Enter the name:\n")
+creator_name = input("Enter the creator name:\n")
+purpose = input("Enter the purpose:\n")
+memory_size = input("Enter the memory size:\n")
+speed = float(input("Enter the speed:\n"))
+print('My Details:')
+print("I am "+ name + ", created by "+ creator_name + ", for the purpose of "+ purpose + ".")
+print("Memory I consume is around "+ memory_size + " and my speed is "+ str(speed) + " GHZ.")

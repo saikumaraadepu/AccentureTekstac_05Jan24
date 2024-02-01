@@ -1,0 +1,129 @@
+<!-- do not make any changes in the template -->
+<!-- fill your code in the areas indicated -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forever Event Management</title> 
+    <style>
+        *{
+            font-weight: bold;
+        }
+        body{
+        	background-image:url("../Images/foreverbg.jpg");
+        	background-size:cover;
+        }
+        table{
+        	width:55%;
+        	height:70%;
+        	margin-left: auto;
+        	margin-right: auto;
+        	border-spacing: 5px;
+        }
+        #foot{
+        	margin-left: 600px;
+        	border-spacing: 5px;	
+        }
+        #submit,#reset{
+        	padding:7px;
+        	font-size:15px;
+        	color: #ffffff;
+        	background-color: #192841;
+        }	
+        img{
+        	margin-left: 500px;
+        	margin-top : 6px;
+        	margin-bottom: 1px;
+        }
+        td{
+        	background-color: #ffffff;
+        }
+        caption, table, td{
+        	border:1px solid #000000;
+        }
+        caption{	
+        	font-size:20px;
+        	font-weight:bold;
+        	color: white;
+        	background-color: #192841;
+        	padding:5px;
+        }
+        input[type="tel"],input[type="email"],input[type="text"],
+        select,textarea, input[type="number"], input[type="url"],
+        input[type="date"]{
+        	width:100%;
+        }
+        input[type="range"]{
+        	width:80%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function show_value(x)
+        {
+        	document.getElementById("demo").innerHTML="Rs."+x;
+        }
+    </script>
+    <form>
+        <figure id="forever_image">
+        	<img id="image1" src="../Images/forever.jpg"  height="80" width="200" alt="bg_image">an Event Management company
+        </figure>
+        <table>
+            <!--fill code here-->
+            <caption id="table_caption">Vendor Registeration Form</caption>
+            <tr>
+                <td><label for="companyname">Company name</label></td>
+                <td><input type="text" id="cname" required></td>
+            </tr>
+            <tr>
+                <td><label for="type">Type</label></td>
+                <td>
+                    <input type="radio" id="corporation" name="ctype">Corporation
+                    <input type="radio" id="partnership" name="ctype">Partnership
+                    <input type="radio" id="individual" name="ctype">Individual
+                    <input type="radio" id="others" name="ctype">Others
+                </td>
+            </tr>
+            <tr>
+                <td><label for="phonenumber">Phone Number</label></td>
+                <td><input type="tel" id="phno" maxlength="10" pattern="[789][0-9]{9}" required></td>
+            </tr>
+            <tr>
+                <td><label for="emailid">Email Id</label></td>
+                <td><input type="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="location">Location</label></td>
+                <td><textarea id="address" rows="4" cols="50" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="websiteaddress">Website Address</label></td>
+                <td><input type="url" id="link" required></td>
+            </tr>
+            <tr>
+                <td><label for="Tinno">TIN No</label></td>
+                <td><input type="number" id="tin" required></td>
+            </tr>
+            <tr>
+                <td><label for="tinnoexpirydate">TIN No Expiry Date</label></td>
+                <td><input type="date" id="expiry" required></td>
+            </tr>
+            <tr>
+                <td><label for="averageprojectcost">Average Project Cost</label></td>
+                <td><input type="range" id="cost" min="25000" max="500000" step="1000" onchange="show_value(this.value);" required></td>
+            </tr>
+            <tr>
+                <td><label for="uploadimagesoflicence,pan&facade">Upload Images of Licence, PAN & Facade</label></td>
+                <td><input type="file" id="profile" multiple required></td>
+            </tr>
+        </table>
+        <br>
+        <div id="foot">
+            <!--fill code here-->
+            <input type="submit" id="submit" value="REGISTER" />
+            <input type="reset" id="reset" value="CLEAR" />
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="../JS/Alliteration.js"></script></head>
+    <body>
+        <form onsubmit="checkAlliteration();return false;">
+            <!--fill the code-->
+            <table>
+                <tr>
+                    <td><label for="char">Enter the letter</label></td>
+                    <td><input type="text" id="char" pattern="[b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]{1}"></td>
+                </tr>
+                <tr>
+                    <td><label for="alliter">Enter the sentence</label></td>
+                    <td><input type="text" id="alliter"></td>
+                </tr>
+            </table>
+            <input type="submit" id="alliterbtn" value="Check Alliteration">
+            <div id="result"></div>
+        </form>
+    </body>
+</html>

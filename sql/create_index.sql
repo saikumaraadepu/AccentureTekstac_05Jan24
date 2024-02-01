@@ -1,0 +1,1 @@
+create index stuindex on student(student_name);

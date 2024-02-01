@@ -1,0 +1,32 @@
+//Don't change or delete the try/catch block
+
+function getFunction() 
+{
+    //Do not make any change in this method
+    try
+    {
+    	var a = document.getElementById("fact").value;
+		document.getElementById("result").innerHTML="Factorial of "+a+" is "+findFactorial(a);
+    }
+    catch(err){
+        document.getElementById("result").innerHTML=err;
+    }
+    return false;
+}
+
+function findFactorial(number) {
+	
+	try 
+	{
+		// Debug the logic to find the Factorial of the given number	
+        var fact = 1;  
+		for (var i = 1; i <= number; i++)  
+		{  
+			fact = fact*i;
+		}
+		return fact;
+	} 
+	catch(err) {
+		document.getElementById("result").innerHTML=err;
+	}
+}

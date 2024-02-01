@@ -1,0 +1,4 @@
+select booking_id,enquiry_id,total_amount
+from booking_master
+where mode_of_pay='Cash' or mode_of_pay='Credit'
+order by enquiry_id;
