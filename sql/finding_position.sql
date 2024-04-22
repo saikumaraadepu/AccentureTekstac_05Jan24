@@ -1,5 +1,4 @@
-select concat(c_first_name,' lives in ',city,
-' and ',case when gender='Male' then 'his' when gender='Female' then 'her' end,
-' phone number is ',phoneno)as customer_Info
-from customer_master
-order by c_first_name desc;
+select c_first_name, position('m' in c_first_name) as position
+from Customer_Master
+where City in ('Los Angeles', 'Boston')
+order by position desc, c_first_name asc;
